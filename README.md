@@ -1,6 +1,6 @@
 # Readable
 
-> Inicialmente este projeto foi desafiado em um dos módulos do [Nanodegree de React da Udacity](https://br.udacity.com/course/react-nanodegree--nd019 target="_blank").
+> Inicialmente este projeto foi desafiado em um dos módulos do [Nanodegree de React da Udacity](https://br.udacity.com/course/react-nanodegree--nd019).
 
 > Agora, o objetivo é melhorar e criar novas funcionalidades a esse projeto.
 
