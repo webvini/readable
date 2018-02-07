@@ -389,9 +389,21 @@ template {
 [hidden] {
   display: none; }
 
-.container {
-  width: 1290px;
-  margin: auto; }
+.inner {
+  padding: 0 2%; }
+
+body {
+  font-family: "Roboto", sans-serif; }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #545454; }
+  color: #545454;
+  margin: 0; }
+
+/* components */
+.header-wrapper {
+  padding: 10px 0;
+  border-top: 5px solid #0d3a5f;
+  background-color: #00bcd4; }
+
+.home-page-wrapper {
+  padding: 15px 0; }
