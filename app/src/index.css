@@ -399,7 +399,16 @@ h1, h2, h3, h4, h5, h6 {
   color: #545454;
   margin: 0; }
 
-/* components */
+a {
+  text-decoration: none;
+  color: #eb191e; }
+  a:hover {
+    color: #c01115; }
+
+p, span {
+  color: #494949; }
+
+/* structure */
 .header-wrapper {
   padding: 10px 0;
   border-top: 5px solid #0d3a5f;
@@ -407,3 +416,31 @@ h1, h2, h3, h4, h5, h6 {
 
 .home-page-wrapper {
   padding: 15px 0; }
+
+/* components */
+.article-wrapper figure {
+  min-height: 150px;
+  margin: 0;
+  text-align: center;
+  line-height: 150px;
+  color: #999;
+  background-color: #f2f2f2; }
+
+.article-wrapper .content {
+  position: relative;
+  padding: 20px 15px; }
+  .article-wrapper .content .title a {
+    color: #545454; }
+    .article-wrapper .content .title a:hover {
+      color: #eb191e; }
+  .article-wrapper .content .category {
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    padding: 5px 15px;
+    position: absolute;
+    top: -13px;
+    right: 20px;
+    background-color: #eb191e; }
+    .article-wrapper .content .category:hover {
+      background-color: #c01115; }

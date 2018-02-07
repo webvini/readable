@@ -1,13 +1,17 @@
 import React from 'react';
 
-const HomePage = () => {
-    return (
-        <section className="home-page-wrapper">
-            <div className="inner">
-                <h1>Home Page</h1>
-            </div>
-        </section>
-    )
+import Article from './../../components/article/index'
+
+class HomePage extends React.Component {
+    render() {
+        return (
+            <section className="home-page-wrapper">
+                <div className="inner">
+                    <Article />
+                </div>
+            </section>
+        )
+    }
 }
 
 export default HomePage;

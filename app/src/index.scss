@@ -5,6 +5,9 @@
 @import 'styles/layout/_structure.scss';
 @import 'styles/layout/_general.scss';
 
-/* components */
+/* structure */
 @import 'header/_style.scss';
 @import 'container/home/_style.scss';
+
+/* components */
+@import 'components/article/_style.scss';
