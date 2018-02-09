@@ -1,34 +1,23 @@
 import React from 'react';
 
 import Article from './../../components/article/index'
+import WarningText from './../../components/warningText/index'
 
 class HomePage extends React.Component {
 
     state = {
         articles: [
-            {   
+            {
                 id: 1,
                 title: 'Primeiro post',
-                description: 'Aqui é um texto'
+                description: 'Lorem ipsum bacon'
             },
             {
                 id: 2,
                 title: 'Segundo post',
-                description: 'Aqui é mais um texto'
+                description: 'Lorem ipsum bacon'
             }
         ]
-    }
-
-    renderArticle = article => {
-        const { id, title, description } = article;
-
-        return (
-            <Article
-                key={id}
-                title={title}
-                description={description}
-            />
-        )
     }
 
     render() {
@@ -37,10 +26,8 @@ class HomePage extends React.Component {
         return (
             <section className="home-page-wrapper">
                 <div className="inner">
-                    
-                    {articles.map(article =>
-                        this.renderArticle(article)
-                    )}
+
+                    { articles.length > 0 ? <Article articles={articles} /> : <WarningText /> }
 
                 </div>
             </section>

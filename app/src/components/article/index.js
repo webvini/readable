@@ -1,21 +1,27 @@
 import React from 'react';
 
-const Article = (props) => {
-    const { title, description } = props;
+const Article = props =>  {
+    const { articles } = props
 
     return (
-        <article className="article-wrapper">
-            <figure>no image</figure>
+        <React.Fragment>
+            {articles.map(article => {
+                return (
+                    <article className="article-wrapper" key={article.id}>
+                        <figure>no image</figure>
 
-            <div className="content">
-                <a href="javascript:;" className="category">React</a>
+                        <div className="content">
+                            <a href="javascript:;" className="category">React</a>
 
-                <h2 className="title"><a href="javascript:;">{title}</a></h2>
-                <p>{description}</p>
+                            <h2 className="title"><a href="javascript:;">{article.title}</a></h2>
+                            <p>{article.description}</p>
 
-                <span className="author">por: <a href="javascript:;">Vinicius</a></span>
-            </div>
-        </article>
+                            <span className="author">por: <a href="javascript:;">Vinicius</a></span>
+                        </div>
+                    </article>
+                )
+            })}
+        </React.Fragment>
     )
 }
 
