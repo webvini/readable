@@ -1,0 +1,27 @@
+.notice-wrapper {
+    padding: 15px;
+
+    &.success {
+        background-color: $successBg;
+
+        p {
+            color: $successText;
+        }
+    }
+
+    &.warning {
+        background-color: $warningBg;
+
+        p {
+            color: $warningText;
+        }
+    }
+
+    &.error {
+        background-color: $errorBg;
+
+        p {
+            color: $errorText;
+        }
+    }
+}

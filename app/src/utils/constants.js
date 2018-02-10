@@ -2,10 +2,9 @@ const Constants = {};
 
 Constants.notice = {
     type: {
-        error: 'error',
         success: 'success',
         warning: 'warning',
-        info: 'info' 
+        error: 'error'
     }
 }
 

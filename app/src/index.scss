@@ -1,7 +1,6 @@
+/* base */
 @import 'styles/base/_reset.scss';
-
 @import 'styles/utilities/_variables.scss';
-
 @import 'styles/layout/_structure.scss';
 @import 'styles/layout/_general.scss';
 
@@ -10,4 +9,5 @@
 @import 'container/home/_style.scss';
 
 /* components */
+@import 'components/notice/_style.scss';
 @import 'components/article/_style.scss';
