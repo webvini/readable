@@ -1,9 +1,15 @@
 import { combineReducers } from 'redux'
 import {
     GET_ARTICLES
-} from './actions'
+} from './../actions'
 
-const articles = (state, action) => {
+const mock = {
+    id: 1,
+    title: 'First article',
+    description: 'Lorem ipsum bacon'
+}
+
+const articles = (state = mock, action) => {
     const { article } = action
 
     switch(action.type) {

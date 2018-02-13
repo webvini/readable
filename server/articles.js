@@ -1,5 +1,20 @@
 const clone = require('clone')
 
+let db = {}
+
+const defaultData = [
+    {
+        id: 1,
+        title: 'First article',
+        description: 'Lorem ipsum bacon'
+    },
+    {
+        id: 2,
+        title: 'Second article',
+        description: 'I love bacon'
+    }
+]
+
 const getData = token => {
     let data = db[token]
 
@@ -12,21 +27,21 @@ const getData = token => {
 
 const get = (token, id) => {
     return new Promise((res) => {
-        const posts = getData(token)
+        const articles = getData(token)
         res(
-            posts[id].deleted
+            articles[id].deleted
             ? {}
-            : posts[id]
+            : articles[id]
         )
     })
 }
 
 const getAll = token => {
     return new Promise((res) => {
-        const posts = getData(token)
-        let keys = Object.keys(posts)
-        let filtered_keys = keys.filter(key => !posts[key].deleted)
-        res(filtered_keys.map(key => posts[key]))
+        const articles = getData(token)
+        let keys = Object.keys(articles)
+        let filtered_keys = keys.filter(key => !articles[key].deleted)
+        res(filtered_keys.map(key => articles[key]))
     })
 }
 

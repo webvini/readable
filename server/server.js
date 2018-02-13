@@ -25,8 +25,21 @@ app.use((req, res, next) => {
     }
 });
 
+app.get('/articles', (req, res) => {
+    articles.getAll(req.token)
+      .then(
+          (data) => res.send(data),
+          (error) => {
+              console.error(error)
+              res.status(500).send({
+                 error: 'There was an error.'
+          })
+        }
+      )
+})
+
 app.post('/articles', bodyParser.json(), (req, res) => {
-    posts.add(req.token, req.body)
+    articles.add(req.token, req.body)
       .then(
             (data) => res.send(data),
             (error) => {
