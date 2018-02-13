@@ -7,6 +7,6 @@ const headers = {
 }
 
 export const getAllArticles = () => {
-    fetch(`${api}/articles`, { headers })
+    return fetch(`${api}/articles`, { headers })
         .then(res => res.json())
 }

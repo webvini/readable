@@ -1,22 +1,14 @@
 import { combineReducers } from 'redux'
 import {
     GET_ARTICLES
-} from './../actions'
+} from './../actions/actionTypes'
 
-const mock = {
-    id: 1,
-    title: 'First article',
-    description: 'Lorem ipsum bacon'
-}
-
-const articles = (state = mock, action) => {
-    const { article } = action
-
+const articles = (state = {}, action) => {
     switch(action.type) {
         case GET_ARTICLES:
             return {
                 ...state,
-                allArticles: action.articles
+                data: action.articles
             }
         default:
             return {

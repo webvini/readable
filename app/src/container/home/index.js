@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import Constants from './../../utils/constants';
 import Article from './../../components/article';
 import Notice from './../../components/notice';
-import { fetchArticles } from '../../actions/index';
+import { fetchArticles } from '../../actions';
 
 class HomePage extends React.Component {
 
@@ -14,22 +14,19 @@ class HomePage extends React.Component {
     }
 
     componentDidMount() {
+        const { fetchArticles } = this.props
         fetchArticles();
     }
 
     render() {
-        const { articles } = this.state;
-
-        if(this.props.articles) {
-            console.log(this.props.articles)
-        }
+        const { articles } = this.props;
 
         return (
             <section className="home-page-wrapper">
                 <div className="inner">
 
-                    { articles.length > 0 ? 
-                        <Article articles={articles} />
+                    { articles.data ? 
+                        <Article articles={articles.data} />
                     :
                         <Notice
                             type={Constants.notice.type.warning}
@@ -43,7 +40,7 @@ class HomePage extends React.Component {
     }
 }
 
-const mapStateToProps = articles => {
+const mapStateToProps = ({ articles }) => {
     return {
         articles
     }
