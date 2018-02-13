@@ -2,8 +2,8 @@ import React from 'react';
 
 import Constants from './../../utils/constants'
 
-import Article from './../../components/article/index'
-import Notice from './../../components/notice/index'
+import Article from './../../components/article'
+import Notice from './../../components/notice'
 
 class HomePage extends React.Component {
 

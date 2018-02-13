@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 import {
     GET_ARTICLES
-} from './actions/index'
+} from './actions'
 
 const articles = (state, action) => {
     const { article } = action

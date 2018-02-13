@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import Header from '../header/index'
-import HomePage from './home/index'
+import Header from '../header'
+import HomePage from './home'
 
 class ContainerMain extends Component {
 
