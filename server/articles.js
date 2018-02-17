@@ -5,13 +5,25 @@ let db = {}
 const defaultData = [
     {
         id: 1,
-        title: 'First article',
-        description: 'Lorem ipsum bacon'
+        timestamp: 1467166872634,
+        title: 'Udacity is the best place to learn React',
+        description: 'Everyone says so after all.',
+        author: 'thingtwo',
+        category: 'react',
+        voteScore: 6,
+        deleted: false,
+        commentCount: 2
     },
     {
         id: 2,
-        title: 'Second article',
-        description: 'I love bacon'
+        timestamp: 1467166872634,
+        title: 'Lorem ipsum BACON',
+        description: 'I have no idea.',
+        author: 'vinicius',
+        category: 'redux',
+        voteScore: 6,
+        deleted: false,
+        commentCount: 2
     }
 ]
 
