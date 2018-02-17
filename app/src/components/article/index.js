@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import moment from 'moment';
 
 const Article = props =>  {
@@ -30,6 +31,10 @@ const Article = props =>  {
             })}
         </React.Fragment>
     )
+}
+
+Article.propTypes = {
+    articles: PropTypes.array
 }
 
 export default Article;

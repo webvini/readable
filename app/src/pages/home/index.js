@@ -8,11 +8,6 @@ import { fetchArticles } from '../../actions';
 
 class HomePage extends React.Component {
 
-    state = {
-        articles: [
-        ]
-    }
-
     componentDidMount() {
         const { fetchArticles } = this.props
         fetchArticles();

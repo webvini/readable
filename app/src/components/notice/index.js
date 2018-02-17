@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Notice = props => {
     const { type, message } = props;
@@ -8,6 +9,11 @@ const Notice = props => {
             <p>{message}</p>
         </section>
     )
+}
+
+Notice.propTypes = {
+    type: PropTypes.string,
+    message: PropTypes.string
 }
 
 export default Notice;
