@@ -1,5 +1,9 @@
 const Constants = {};
 
+Constants.logo = {
+    title:  'Readable' 
+}
+
 Constants.notice = {
     type: {
         success: 'success',

@@ -7,7 +7,7 @@
         text-align: center;
         line-height: 150px;
         color: #999;
-        background-color: #f2f2f2;
+        background-color: #d8d8d8;
     }
 
     .content {
@@ -19,7 +19,7 @@
         }
 
         span {
-            font-size: 12px;
+            font-size: $fontSizeSmallText;
             color: rgb(175, 175, 175);
         }
 
@@ -34,7 +34,7 @@
         }
 
         .category {
-            font-size: 12px;
+            font-size: $fontSizeSmallText;
             font-weight: bold;
             color: $colorTextOnSecondColor;
             padding: 5px 15px;
