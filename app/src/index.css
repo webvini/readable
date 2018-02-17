@@ -448,6 +448,11 @@ p, span {
   .article-wrapper .content {
     position: relative;
     padding: 20px 15px; }
+    .article-wrapper .content p {
+      margin: 10px 0; }
+    .article-wrapper .content span {
+      font-size: 12px;
+      color: #afafaf; }
     .article-wrapper .content .title a {
       color: #545454; }
       .article-wrapper .content .title a:hover {
