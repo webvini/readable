@@ -1,12 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import Header from './../../header';
+import Menu from './../../menu';
+
 import Constants from './../../utils/constants';
 import Article from './../../components/article';
 import Notice from './../../components/notice';
 import { fetchArticles } from '../../actions';
 
-class HomePage extends React.Component {
+class Home extends React.Component {
 
     componentDidMount() {
         const { fetchArticles } = this.props
@@ -18,20 +21,25 @@ class HomePage extends React.Component {
         const { data } = articles
 
         return (
-            <section className="home-page-wrapper">
-                <div className="inner">
+            <React.Fragment>
+                <Header />
+                <Menu />
 
-                    { data ? 
-                        <Article articles={data} />
-                    :
-                        <Notice
-                            type={Constants.notice.type.warning}
-                            message={Constants.messages.noArticle}
-                        />
-                    }
+                <section className="home-page-wrapper">
+                    <div className="inner">
 
-                </div>
-            </section>
+                        { data ? 
+                            <Article articles={data} />
+                        :
+                            <Notice
+                                type={Constants.notice.type.warning}
+                                message={Constants.messages.noArticle}
+                            />
+                        }
+
+                    </div>
+                </section>
+            </React.Fragment>
         )
     }
 }
@@ -51,4 +59,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(HomePage);
+)(Home);

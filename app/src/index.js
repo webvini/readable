@@ -4,10 +4,15 @@ import thunkMiddleware from 'redux-thunk';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 
+import { Router, Switch, Route } from 'react-router-dom';
+import createHistory from 'history/createBrowserHistory';
+
 import reducer from './reducers/index'
-import Pages from './pages';
+import Home from './views/home';
+
 import './index.css';
 
+const history = createHistory();
 const store = createStore(
   reducer,
   applyMiddleware(
@@ -16,8 +21,12 @@ const store = createStore(
 );
 
 ReactDOM.render(
-  <Provider store={store}>
-    <Pages />
-  </Provider>,
-  document.getElementById('root')
+	<Provider store={store}>
+		<Router history={history}>
+			<Switch>
+				<Route path="/" component={Home} />
+			</Switch>
+		</Router>
+  	</Provider>,
+  	document.getElementById('root')
 );
