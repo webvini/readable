@@ -9,3 +9,12 @@ export const fetchArticles = () => {
         }))
     }
 }
+
+export const fetchCategories = () => {
+    return dispatch => {
+        API.getAllCategories().then(categories => dispatch({
+            type: actionTypes.GET_CATEGORIES,
+            categories
+        }))
+    }
+}

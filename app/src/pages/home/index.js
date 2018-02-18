@@ -14,14 +14,15 @@ class HomePage extends React.Component {
     }
 
     render() {
-        const { articles } = this.props;
+        const { articles } = this.props
+        const { data } = articles
 
         return (
             <section className="home-page-wrapper">
                 <div className="inner">
 
-                    { articles.data ? 
-                        <Article articles={articles.data} />
+                    { data ? 
+                        <Article articles={data} />
                     :
                         <Notice
                             type={Constants.notice.type.warning}

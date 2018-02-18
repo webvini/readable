@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux'
 import {
-    GET_ARTICLES
+    GET_ARTICLES,
+    GET_CATEGORIES
 } from './../actions/actionTypes'
 
 const articles = (state = {}, action) => {
@@ -17,6 +18,21 @@ const articles = (state = {}, action) => {
     }
 }
 
+const categories = (state = {}, action) => {
+    switch(action.type) {
+        case GET_CATEGORIES:
+            return {
+                ...state,
+                data: action.categories
+            }
+        default:
+            return {
+                ...state
+            }
+    }
+}
+
 export default combineReducers({
-    articles
+    articles,
+    categories
 })
