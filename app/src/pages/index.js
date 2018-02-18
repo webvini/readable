@@ -3,6 +3,7 @@ import { Router, Switch, Route } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
 
 import Header from '../header';
+import Menu from '../menu';
 import HomePage from './home';
 
 const Pages = () => {
@@ -11,6 +12,7 @@ const Pages = () => {
     return (
         <React.Fragment>
             <Header />
+            <Menu />
 
             <Router history={history}>
                 <Switch>

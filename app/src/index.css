@@ -401,10 +401,11 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0; }
 
 a {
+  font-size: 14px;
   text-decoration: none;
   color: #eb191e; }
-  a:hover {
-    color: #c01115; }
+  a.active, a:hover {
+    color: #333333; }
 
 p, span {
   font-size: 14px;
@@ -418,6 +419,13 @@ p, span {
   text-align: center;
   border-top: 2px solid #000; }
 
+.nav-wrapper li {
+  display: inline-block;
+  margin-right: 25px; }
+  .nav-wrapper li a {
+    font-size: 16px; }
+
+/* pages */
 .home-page-wrapper {
   padding: 15px 0; }
 
