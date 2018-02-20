@@ -14,10 +14,10 @@ import './index.css';
 
 const history = createHistory();
 const store = createStore(
-  reducer,
-  applyMiddleware(
-    thunkMiddleware
-  )
+	reducer,
+  	applyMiddleware(
+    	thunkMiddleware
+ 	)
 );
 
 ReactDOM.render(
