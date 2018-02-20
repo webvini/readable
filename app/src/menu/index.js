@@ -10,6 +10,12 @@ class Menu extends React.PureComponent {
         fetchCategories();
     }
 
+    setCategory = category => {
+        console.log(category)
+        const { history } = this.props
+        history.push(category)
+    }
+
     render() {
         const { categories } = this.props
         const { data } =  categories
@@ -19,7 +25,11 @@ class Menu extends React.PureComponent {
                 <ul className="inner">
                     {data &&
                         data.map(category =>
-                            <li key={category.path}><a href=''>{category.name}</a></li>
+                            <li key={category.path}>
+                                <a onClick={() => this.setCategory(category.path)}>
+                                    {category.name}
+                                </a>
+                            </li>
                         )
                     }
                 </ul>

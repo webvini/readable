@@ -17,19 +17,22 @@ class Home extends React.Component {
     }
 
     render() {
-        const { articles } = this.props
+        const { articles, history, location } = this.props
         const { data } = articles
 
         return (
             <React.Fragment>
                 <Header />
-                <Menu />
+                <Menu history={history} />
 
                 <section className="home-page-wrapper">
                     <div className="inner">
 
                         { data ? 
-                            <Article articles={data} />
+                            <Article
+                                articles={data}
+                                location={location}
+                            />
                         :
                             <Notice
                                 type={Constants.notice.type.warning}
