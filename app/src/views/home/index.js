@@ -19,11 +19,11 @@ class Home extends React.Component {
     renderArticle = data => {
         const { history } = this.props
         const { pathname } = history.location
-        const category = pathname.slice(1)
-
+        const category = pathname
+        
         return (
             data
-                .filter(article => article.category === category || category === undefined)
+                .filter(article => article.category === category.slice(1) || category === '/')
                 .map((article, index) => (
                     <Article
                         key={index}
