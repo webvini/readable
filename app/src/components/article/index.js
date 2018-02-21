@@ -12,7 +12,7 @@ const Article = props => {
 
             <div className="content">
                 <a onClick={() => history.push(category)} className="category">{category}</a>
-                <h2 className="title"><a onClick={() => history.push(category)}>{title}</a></h2>
+                <h2 className="title"><a>{title}</a></h2>
                 <p>{description}</p>
 
                 <span className="about">
