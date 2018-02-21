@@ -20,7 +20,7 @@ class Home extends React.Component {
         const { history } = this.props
         const { pathname } = history.location
         const category = pathname
-        
+
         return (
             data
                 .filter(article => article.category === category.slice(1) || category === '/')
@@ -28,13 +28,14 @@ class Home extends React.Component {
                     <Article
                         key={index}
                         article={article}
+                        history={history}
                     />
                 ))
         )
     }
 
     render() {
-        const { articles, history, location } = this.props
+        const { articles, history } = this.props
         const { data } = articles
 
         return (
