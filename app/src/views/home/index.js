@@ -5,7 +5,7 @@ import Header from './../../header';
 import Menu from './../../menu';
 
 import Constants from './../../utils/constants';
-import Article from './../../components/article';
+import ArticleSummary from './../../components/article';
 import Notice from './../../components/notice';
 import { fetchArticles } from '../../actions';
 
@@ -16,7 +16,7 @@ class Home extends React.Component {
         fetchArticles();
     }
 
-    renderArticle = data => {
+    renderArticleSummary = data => {
         const { history } = this.props
         const { pathname } = history.location
         const category = pathname
@@ -25,7 +25,7 @@ class Home extends React.Component {
             data
                 .filter(article => article.category === category.slice(1) || category === '/')
                 .map((article, index) => (
-                    <Article
+                    <ArticleSummary
                         key={index}
                         article={article}
                         history={history}
@@ -47,7 +47,7 @@ class Home extends React.Component {
                     <div className="inner">
 
                         { data ? 
-                            this.renderArticle(data)
+                            this.renderArticleSummary(data)
                         :
                             <Notice
                                 type={Constants.notice.type.warning}

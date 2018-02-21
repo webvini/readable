@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 
-const Article = props => {
+const ArticleSummary = props => {
     const { article, history } = props
     const { category, title, description, timestamp, author } = article
 
     return (
-        <article className="article-wrapper">
+        <article className="article-summary-wrapper">
             <figure>no image</figure>
 
             <div className="content">
@@ -26,8 +26,8 @@ const Article = props => {
     )
 }
 
-Article.propTypes = {
+ArticleSummary.propTypes = {
     articles: PropTypes.array
 }
 
-export default Article;
+export default ArticleSummary;
