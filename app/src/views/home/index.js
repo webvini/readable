@@ -16,6 +16,23 @@ class Home extends React.Component {
         fetchArticles();
     }
 
+    renderArticle = data => {
+        const { history } = this.props
+        const { pathname } = history.location
+        const category = pathname.slice(1)
+
+        return (
+            data
+                .filter(article => article.category === category || category === undefined)
+                .map((article, index) => (
+                    <Article
+                        key={index}
+                        article={article}
+                    />
+                ))
+        )
+    }
+
     render() {
         const { articles, history, location } = this.props
         const { data } = articles
@@ -29,10 +46,7 @@ class Home extends React.Component {
                     <div className="inner">
 
                         { data ? 
-                            <Article
-                                articles={data}
-                                location={location}
-                            />
+                            this.renderArticle(data)
                         :
                             <Notice
                                 type={Constants.notice.type.warning}
