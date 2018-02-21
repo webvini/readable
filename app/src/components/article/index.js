@@ -27,7 +27,8 @@ const ArticleSummary = props => {
 }
 
 ArticleSummary.propTypes = {
-    articles: PropTypes.array
+    article: PropTypes.object,
+    history: PropTypes.object
 }
 
 export default ArticleSummary;
