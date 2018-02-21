@@ -11,6 +11,7 @@ a {
     font-size: $fontSizeText;
     text-decoration: none;
     color: $link;
+    cursor: pointer;
 
     &.active,
     &:hover {

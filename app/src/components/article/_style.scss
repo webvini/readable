@@ -26,6 +26,7 @@
         .title {
             a {
                 color: $titleColor;
+                font-size: $fontSizeTitle;
                 
                 &:hover {
                     color: $sencondColor;

@@ -2,13 +2,15 @@ $sencondColor: #eb191e;
 $sencondColorHover: darken($sencondColor, 10);
 $colorTextOnSecondColor: #fff;
 
-$fontFamily: 'Roboto', sans-serif;
-$fontSizeText: 14px;
-$fontSizeSmallText: 12px;
 $titleColor: #545454;
 $colorText: #494949;
 $link: $sencondColor;
 $linkHover: #333333;
+
+$fontFamily: 'Roboto', sans-serif;
+$fontSizeTitle: 20px;
+$fontSizeText: 14px;
+$fontSizeSmallText: 12px;
 
 $successBg: #d4edda;
 $successText: #155724;
