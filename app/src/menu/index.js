@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { fetchCategories } from './../actions';
+import Link from 'react-router-dom/Link';
 
 class Menu extends React.PureComponent {
     
@@ -11,7 +12,6 @@ class Menu extends React.PureComponent {
     }
 
     setCategory = category => {
-        console.log(category)
         const { history } = this.props
         history.push(category)
     }
@@ -26,9 +26,7 @@ class Menu extends React.PureComponent {
                     {data &&
                         data.map(category =>
                             <li key={category.path}>
-                                <a onClick={() => this.setCategory(category.path)}>
-                                    {category.name}
-                                </a>
+                                <Link to={`/${category.path}`}>{category.name}</Link>
                             </li>
                         )
                     }

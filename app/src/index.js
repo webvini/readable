@@ -9,6 +9,7 @@ import createHistory from 'history/createBrowserHistory';
 
 import reducer from './reducers/index'
 import Home from './views/home';
+import Details from './views/details';
 
 import './index.css';
 
@@ -24,7 +25,9 @@ ReactDOM.render(
 	<Provider store={store}>
 		<Router history={history}>
 			<Switch>
-				<Route path="/" component={Home} />
+				<Route path="/" exact component={Home} />
+				<Route path="/:category/:post" component={Details} />
+				<Route path="/:category" component={Home} />
 			</Switch>
 		</Router>
   	</Provider>,
