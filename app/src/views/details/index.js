@@ -2,6 +2,7 @@ import React from 'react';
 
 import Header from './../../header';
 import Menu from './../../menu';
+import FullArticle from './../../components/full-article'
 
 class Details extends React.Component {
     render() {
@@ -13,7 +14,7 @@ class Details extends React.Component {
                 <Menu history={history} />
 
                 <section className="details-page-wrapper">
-                    <h1>Bacon</h1>
+                    <FullArticle />
                 </section>
             </React.Fragment>
         )

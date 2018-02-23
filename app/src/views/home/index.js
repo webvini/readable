@@ -5,7 +5,7 @@ import Header from './../../header';
 import Menu from './../../menu';
 
 import Constants from './../../utils/constants';
-import ArticleSummary from './../../components/article';
+import ArticleSummary from './../../components/article-summary';
 import Notice from './../../components/notice';
 import { fetchArticles } from '../../actions';
 
@@ -77,4 +77,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(Home);
+)(Home)
