@@ -1,10 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
+import { Link } from 'react-router-dom';
+
+import Scripts from './../../utils/scripts'
 
 const ArticleSummary = props => {
     const { article, history } = props
     const { category, title, description, timestamp, author } = article
+    const url = Scripts.stringToUrl(title)
 
     return (
         <article className="article-summary-wrapper">
@@ -12,7 +16,9 @@ const ArticleSummary = props => {
 
             <div className="content">
                 <a onClick={() => history.push(category)} className="category">{category}</a>
-                <h2 className="title"><a>{title}</a></h2>
+                <h2 className="title">
+                    <Link to={`/${category}/${url}`}>{title}</Link>
+                </h2>
                 <p>{description}</p>
 
                 <span className="about">
