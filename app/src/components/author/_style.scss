@@ -11,7 +11,8 @@
     div {
         line-height: 44px;
 
-        a {
+        .name {
+            display: inline-block;
             margin: 0 20px;
         }
     }

@@ -453,7 +453,8 @@ p, span {
     color: #999; }
   .author-wrapper div {
     line-height: 44px; }
-    .author-wrapper div a {
+    .author-wrapper div .name {
+      display: inline-block;
       margin: 0 20px; }
 
 .article-summary-wrapper {
