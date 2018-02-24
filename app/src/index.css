@@ -58,7 +58,7 @@ main {
    * Add the correct margin in IE 8.
    */
 figure {
-  margin: 1em 40px; }
+  margin: 0; }
 
 /**
    * 1. Add the correct box sizing in Firefox.
@@ -446,11 +446,23 @@ p, span {
     .notice-wrapper.error p {
       color: #721c24; }
 
+.author-wrapper > div {
+  display: flex; }
+  .author-wrapper > div figure {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    background-color: #333;
+    border-radius: 50%; }
+  .author-wrapper > div div {
+    line-height: 44px; }
+    .author-wrapper > div div a {
+      margin: 0 20px; }
+
 .article-summary-wrapper {
   margin-bottom: 40px; }
   .article-summary-wrapper figure {
     min-height: 150px;
-    margin: 0;
     text-align: center;
     line-height: 150px;
     color: #999;

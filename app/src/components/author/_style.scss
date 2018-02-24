@@ -1,0 +1,21 @@
+.author-wrapper {
+    > div {
+        display: flex;
+        
+        figure {
+            display: inline-block;
+            width: 44px;
+            height: 44px;
+            background-color: #333;
+            border-radius: 50%;
+        }
+
+        div {
+            line-height: 44px;
+
+            a {
+                margin: 0 20px;
+            }
+        }
+    }
+}
