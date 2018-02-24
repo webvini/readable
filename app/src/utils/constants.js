@@ -16,4 +16,8 @@ Constants.messages = {
     noArticle: 'You have no articles yet'
 }
 
+Constants.articles = {
+    summaryLimit: 100
+}
+
 export default Constants;

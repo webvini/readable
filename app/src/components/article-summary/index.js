@@ -9,6 +9,7 @@ const ArticleSummary = props => {
     const { article, history } = props
     const { id, category, title, description, timestamp, author } = article
     const url = Scripts.stringToUrl(title)
+    const summary = Scripts.toSummary(description)
 
     return (
         <article className="article-summary-wrapper">
@@ -26,7 +27,7 @@ const ArticleSummary = props => {
                     }}>{title}</Link>
                 </h2>
 
-                <p>{description}</p>
+                <p>{summary}</p>
 
                 <Author author={author} timestamp={timestamp} />
             </div>
