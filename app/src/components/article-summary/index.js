@@ -7,7 +7,7 @@ import Scripts from './../../utils/scripts'
 
 const ArticleSummary = props => {
     const { article, history } = props
-    const { category, title, description, timestamp, author } = article
+    const { id, category, title, description, timestamp, author } = article
     const url = Scripts.stringToUrl(title)
 
     return (
@@ -16,9 +16,16 @@ const ArticleSummary = props => {
 
             <div className="content">
                 <a onClick={() => history.push(category)} className="category">{category}</a>
+
                 <h2 className="title">
-                    <Link to={`/${category}/${url}`}>{title}</Link>
+                    <Link to={{
+                        pathname: `/${category}/${url}`,
+                        state: {
+                            articleID: id
+                        }
+                    }}>{title}</Link>
                 </h2>
+
                 <p>{description}</p>
 
                 <span className="about">

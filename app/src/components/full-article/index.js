@@ -2,7 +2,9 @@ import React from 'react';
 
 import Author from './../author'
 
-const FullArticle = () => {
+const FullArticle = props => {
+    const { articleID } = props
+
     return (
         <article className="full-article-wrapper">
             <Author />
