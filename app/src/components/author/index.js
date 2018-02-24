@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import moment from 'moment';
 
 import 'font-awesome/css/font-awesome.min.css';
@@ -15,6 +16,11 @@ const Author = props => {
             </div>
         </section>
     )
+}
+
+Author.propTypes = {
+    author: PropTypes.string,
+    timestamp: PropTypes.number
 }
 
 export default Author
