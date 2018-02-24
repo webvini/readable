@@ -2,11 +2,10 @@
     display: flex;
     
     figure {
-        display: inline-block;
-        width: 44px;
-        height: 44px;
-        background-color: #333;
-        border-radius: 50%;
+        i {
+            font-size: 44px;
+            color: #999;
+        }
     }
 
     div {

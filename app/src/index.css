@@ -448,12 +448,9 @@ p, span {
 
 .author-wrapper {
   display: flex; }
-  .author-wrapper figure {
-    display: inline-block;
-    width: 44px;
-    height: 44px;
-    background-color: #333;
-    border-radius: 50%; }
+  .author-wrapper figure i {
+    font-size: 44px;
+    color: #999; }
   .author-wrapper div {
     line-height: 44px; }
     .author-wrapper div a {
