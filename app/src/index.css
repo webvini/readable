@@ -398,7 +398,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: #545454;
-  margin: 0; }
+  margin: 0 0 20px 0; }
 
 a {
   font-size: 14px;
@@ -410,6 +410,7 @@ a {
 
 p, span {
   font-size: 14px;
+  line-height: 22px;
   color: #494949;
   margin: 0; }
 

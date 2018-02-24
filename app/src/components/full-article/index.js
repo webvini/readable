@@ -17,6 +17,7 @@ const FullArticle = props => {
 
             <div className="inner">
                 <h2>{title}</h2>
+                <p>{description}</p>
             </div>
         </article>
     )
