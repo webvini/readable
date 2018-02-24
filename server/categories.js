@@ -5,8 +5,8 @@ let db = {}
 
 const defaultData = [
 	{
-		name: 'React',
-		path: 'react'
+		name: 'Javascript',
+		path: 'javascript'
 	},
 	{
 		name: 'Redux',
