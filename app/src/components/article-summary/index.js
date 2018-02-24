@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import moment from 'moment';
 import { Link } from 'react-router-dom';
 
 import Scripts from './../../utils/scripts'
+import Author from './../author'
 
 const ArticleSummary = props => {
     const { article, history } = props
@@ -28,12 +28,7 @@ const ArticleSummary = props => {
 
                 <p>{description}</p>
 
-                <span className="about">
-                    <a href="javascript:;">
-                        {author}
-                    </a> 
-                    - {moment(timestamp).fromNow()}
-                </span>
+                <Author author={author} timestamp={timestamp} />
             </div>
         </article>
     )

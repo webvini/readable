@@ -9,7 +9,9 @@ const FullArticle = props => {
 
     return (
         <article className="full-article-wrapper">
-            <Author author={author} timestamp={timestamp} />
+            <div className="inner">
+                <Author author={author} timestamp={timestamp} />
+            </div>
 
             <figure></figure>
 

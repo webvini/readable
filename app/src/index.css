@@ -446,22 +446,22 @@ p, span {
     .notice-wrapper.error p {
       color: #721c24; }
 
-.author-wrapper > div {
+.author-wrapper {
   display: flex; }
-  .author-wrapper > div figure {
+  .author-wrapper figure {
     display: inline-block;
     width: 44px;
     height: 44px;
     background-color: #333;
     border-radius: 50%; }
-  .author-wrapper > div div {
+  .author-wrapper div {
     line-height: 44px; }
-    .author-wrapper > div div a {
+    .author-wrapper div a {
       margin: 0 20px; }
 
 .article-summary-wrapper {
   margin-bottom: 40px; }
-  .article-summary-wrapper figure {
+  .article-summary-wrapper > figure {
     min-height: 150px;
     text-align: center;
     line-height: 150px;
