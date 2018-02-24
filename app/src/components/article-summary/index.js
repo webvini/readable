@@ -21,7 +21,7 @@ const ArticleSummary = props => {
                     <Link to={{
                         pathname: `/${category}/${url}`,
                         state: {
-                            articleID: id
+                            article
                         }
                     }}>{title}</Link>
                 </h2>
