@@ -6,7 +6,7 @@ import Vote from './../vote'
 
 const FullArticle = props => {
     const { article } = props
-    const { id, category, title, description, timestamp, author } = article
+    const { id, category, title, description, timestamp, author, voteUp, voteDown } = article
 
     return (
         <article className="full-article-wrapper">
@@ -20,7 +20,7 @@ const FullArticle = props => {
                 <h2>{title}</h2>
                 <p>{description}</p>
 
-                <Vote />
+                <Vote voteUp={voteUp} voteDown={voteDown} />
             </div>
         </article>
     )
