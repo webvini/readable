@@ -1,5 +1,6 @@
 .author-wrapper {
     display: flex;
+    padding: 15px 0;
     
     figure {
         i {
@@ -14,6 +15,11 @@
         .name {
             display: inline-block;
             margin: 0 20px;
+        }
+
+        span {
+            font-size: $fontSizeSmallText;
+            color: rgb(175, 175, 175);
         }
     }
 }

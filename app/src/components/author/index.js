@@ -11,7 +11,7 @@ const Author = props => {
         <section className="author-wrapper">
             <figure><i className="fa fa-user-circle"></i></figure>
             <div>
-                <h4 className="name">{author}</h4>
+                <h5 className="name">{author}</h5>
                 <span>{moment(timestamp).fromNow()}</span>
             </div>
         </section>

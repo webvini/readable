@@ -391,7 +391,7 @@ template {
   display: none; }
 
 .inner {
-  padding: 0 2%; }
+  padding: 0 5%; }
 
 body {
   font-family: "Roboto", sans-serif; }
@@ -448,7 +448,8 @@ p, span {
       color: #721c24; }
 
 .author-wrapper {
-  display: flex; }
+  display: flex;
+  padding: 15px 0; }
   .author-wrapper figure i {
     font-size: 44px;
     color: #999; }
@@ -457,6 +458,9 @@ p, span {
     .author-wrapper div .name {
       display: inline-block;
       margin: 0 20px; }
+    .author-wrapper div span {
+      font-size: 12px;
+      color: #afafaf; }
 
 .article-summary-wrapper {
   margin-bottom: 40px; }
@@ -471,9 +475,6 @@ p, span {
     padding: 20px 15px; }
     .article-summary-wrapper .content p {
       margin: 10px 0; }
-    .article-summary-wrapper .content span {
-      font-size: 12px;
-      color: #afafaf; }
     .article-summary-wrapper .content .title a {
       color: #545454;
       font-size: 20px; }
