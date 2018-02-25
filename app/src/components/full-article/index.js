@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Author from './../author'
+import Vote from './../vote'
 
 const FullArticle = props => {
     const { article } = props
@@ -18,6 +19,8 @@ const FullArticle = props => {
             <div className="inner">
                 <h2>{title}</h2>
                 <p>{description}</p>
+
+                <Vote />
             </div>
         </article>
     )

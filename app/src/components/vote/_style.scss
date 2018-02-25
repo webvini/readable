@@ -1,0 +1,21 @@
+.vote-wrapper {
+    margin: 20px 0;
+    background-color: #ccc;
+
+    button {
+        padding: 5px 0;
+        font-size: $fontSizeSmallText;
+        width: 50%;
+        border: none;
+
+        &:first-child {
+            color: $successText;
+            background-color: $successBg;
+        }
+
+        &:last-child {
+            color: $errorText;
+            background-color: $errorBg;
+        }
+    }
+}

@@ -462,6 +462,21 @@ p, span {
       font-size: 12px;
       color: #afafaf; }
 
+.vote-wrapper {
+  margin: 20px 0;
+  background-color: #ccc; }
+  .vote-wrapper button {
+    padding: 5px 0;
+    font-size: 12px;
+    width: 50%;
+    border: none; }
+    .vote-wrapper button:first-child {
+      color: #155724;
+      background-color: #d4edda; }
+    .vote-wrapper button:last-child {
+      color: #721c24;
+      background-color: #f8d7da; }
+
 .article-summary-wrapper {
   margin-bottom: 40px; }
   .article-summary-wrapper > figure {
