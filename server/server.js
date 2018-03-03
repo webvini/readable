@@ -65,6 +65,21 @@ app.post('/articles', bodyParser.json(), (req, res) => {
         )
 })
 
+app.post('/articles/:id', bodyParser.json(), (req, res) => {
+    const { option } = req.body
+    const id = req.params.id
+    articles.vote(req.token, id, option)
+      .then(
+          (data) => res.send(data),
+          (error) => {
+              console.error(error)
+              res.status(500).send({
+                  error: 'There was an error.'
+              })
+          }
+      )
+})
+
 app.listen(config.port, () => {
     console.log('Server listening on port %s, Ctrl+C to stop', config.port)
 })

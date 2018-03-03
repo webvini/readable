@@ -1,15 +1,25 @@
 import { combineReducers } from 'redux'
 import {
     GET_ARTICLES,
+    UP_VOTE,
     GET_CATEGORIES
 } from './../actions/actionTypes'
 
 const articles = (state = {}, action) => {
+    const { articles } = action
+
+    console.log(articles)
+
     switch(action.type) {
         case GET_ARTICLES:
             return {
                 ...state,
-                data: action.articles
+                data: articles
+            }
+        case UP_VOTE:
+            return {
+                ...state,
+                data: articles
             }
         default:
             return {

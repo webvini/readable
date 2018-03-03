@@ -20,4 +20,9 @@ Constants.articles = {
     summaryLimit: 100
 }
 
+Constants.vote = {
+    up: 'upVote',
+    down: 'downVote'
+}
+
 export default Constants;
