@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import thunkMiddleware from 'redux-thunk';
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 
 import { Router, Switch, Route } from 'react-router-dom';
@@ -13,13 +13,18 @@ import Details from './views/details';
 
 import './index.css';
 
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const history = createHistory();
 const store = createStore(
 	reducer,
-  	applyMiddleware(
-    	thunkMiddleware
- 	)
+	composeEnhancers(
+		applyMiddleware(
+    		thunkMiddleware
+		)
+	)
 );
+
+console.log(store)
 
 ReactDOM.render(
 	<Provider store={store}>

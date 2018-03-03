@@ -43,6 +43,6 @@ Vote.propTypes = {
 }
 
 export default connect(
-    mapStateToProps ,
+    mapStateToProps,
     mapDispatchToProps
 )(Vote)

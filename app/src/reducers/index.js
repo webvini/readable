@@ -8,8 +8,6 @@ import {
 const articles = (state = {}, action) => {
     const { articles } = action
 
-    console.log(articles)
-
     switch(action.type) {
         case GET_ARTICLES:
             return {
