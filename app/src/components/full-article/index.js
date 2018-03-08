@@ -6,7 +6,7 @@ import Vote from './../vote'
 
 const FullArticle = props => {
     const { article } = props
-    const { id, category, title, description, timestamp, author, upVote, downVote } = article
+    const { id, title, description, timestamp, author } = article
 
     return (
         <article className="full-article-wrapper">
