@@ -22,7 +22,6 @@ export const getAllCategories = () => {
 }
 
 export const articleVote = (postID, type) => {
-    console.log(type)
     return fetch(`${api}/articles/${postID}`, {
         method: 'POST',
         headers,

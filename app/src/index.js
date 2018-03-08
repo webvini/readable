@@ -24,8 +24,6 @@ const store = createStore(
 	)
 );
 
-console.log(store)
-
 ReactDOM.render(
 	<Provider store={store}>
 		<Router history={history}>
