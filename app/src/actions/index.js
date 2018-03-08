@@ -11,6 +11,15 @@ export const fetchArticles = () => {
     }
 }
 
+export const fetchArticle = postID => {
+    return dispatch => {
+        API.getArticle(postID).then(article => dispatch({
+            type: actionTypes.GET_ARTICLE,
+            article
+        }))
+    }
+}
+
 export const fetchCategories = () => {
     return dispatch => {
         API.getAllCategories().then(categories => dispatch({

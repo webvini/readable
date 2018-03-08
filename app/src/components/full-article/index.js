@@ -20,7 +20,7 @@ const FullArticle = props => {
                 <h2>{title}</h2>
                 <p>{description}</p>
 
-                <Vote postID={id} upVote={upVote} downVote={downVote} />
+                <Vote postID={id} />
             </div>
         </article>
     )

@@ -3,9 +3,14 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import Constants from './../../utils/constants';
-import { votePost } from '../../actions';
+import { votePost, fetchArticle } from '../../actions';
 
 class Vote extends React.Component {
+
+    componentDidMount() {
+        const { postID, fetchArticle } = this.props
+        fetchArticle(postID)
+    }
 
     up = () => {
         const { votePost, postID } = this.props
@@ -13,13 +18,17 @@ class Vote extends React.Component {
     }
 
     render() {
-        const { upVote, downVote } = this.props
-        console.log(this.props)
+        const { articles } = this.props
+        const { data } = articles
 
         return (
             <section className="vote-wrapper">
-                <button onClick={() => this.up()}>({upVote}) Like</button>
-                <button>({downVote}) Dislike</button>
+                { data &&
+                    <React.Fragment>
+                        <button onClick={() => this.up()}>({data.upVote}) Like</button>
+                        <button>({data.downVote}) Dislike</button>
+                    </React.Fragment>
+                }
             </section>
         )
     }
@@ -33,7 +42,8 @@ const mapStateToProps = ({ articles }) => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        votePost: (postID, type) => dispatch(votePost(postID, type))
+        votePost: (postID, type) => dispatch(votePost(postID, type)),
+        fetchArticle: (postID) => dispatch(fetchArticle(postID))
     }
 }
 

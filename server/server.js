@@ -39,6 +39,19 @@ app.get('/categories', (req, res) => {
       )
 })
 
+app.get('/articles/:id', (req, res) => {
+    articles.get(req.token, req.params.id)
+      .then(
+          (data) => res.send(data),
+          (error) => {
+              console.error(error)
+              res.status(500).send({
+                  error: 'There was an error.'
+              })
+          }
+      )
+})
+
 app.get('/articles', (req, res) => {
     articles.getAll(req.token)
       .then(
