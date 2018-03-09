@@ -2,7 +2,7 @@ import { combineReducers } from 'redux'
 import {
     GET_ARTICLES,
     GET_ARTICLE,
-    UP_VOTE,
+    VOTE,
     GET_CATEGORIES
 } from './../actions/actionTypes'
 
@@ -20,7 +20,7 @@ const articles = (state = {}, action) => {
                 ...state,
                 data: article
             }
-        case UP_VOTE:
+        case VOTE:
             return {
                 ...state,
                 data: article

@@ -17,6 +17,11 @@ class Vote extends React.Component {
         votePost(postID, Constants.vote.up)
     }
 
+    down = () => {
+        const { votePost, postID } = this.props
+        votePost(postID, Constants.vote.down)
+    }
+
     render() {
         const { articles } = this.props
         const { data } = articles
@@ -26,7 +31,7 @@ class Vote extends React.Component {
                 { data &&
                     <React.Fragment>
                         <button onClick={() => this.up()}>({data.upVote}) Like</button>
-                        <button>({data.downVote}) Dislike</button>
+                        <button onClick={() => this.down()}>({data.downVote}) Dislike</button>
                     </React.Fragment>
                 }
             </section>
