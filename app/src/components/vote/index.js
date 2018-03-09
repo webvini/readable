@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
 
 import Constants from './../../utils/constants';
 import { votePost, fetchArticle } from '../../actions';
@@ -50,11 +49,6 @@ const mapDispatchToProps = dispatch => {
         votePost: (postID, type) => dispatch(votePost(postID, type)),
         fetchArticle: (postID) => dispatch(fetchArticle(postID))
     }
-}
-
-Vote.propTypes = {
-    voteUp: PropTypes.number,
-    voteDown: PropTypes.number
 }
 
 export default connect(

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import Header from './../../header';
@@ -72,6 +73,10 @@ const mapDispatchToProps = dispatch => {
     return {
         fetchArticles: () => dispatch(fetchArticles())
     }
+}
+
+Home.propTypes = {
+    articles: PropTypes.object
 }
 
 export default connect(
