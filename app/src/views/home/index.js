@@ -46,7 +46,7 @@ class Home extends React.Component {
                 <section className="home-page-wrapper">
                     <div className="inner">
 
-                        { data ? 
+                        { Array.isArray(data) ? 
                             this.renderArticleSummary(data)
                         :
                             <Notice
