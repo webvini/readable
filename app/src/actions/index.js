@@ -33,9 +33,9 @@ export const votePost = (postID, type) => {
     let actionType = ( type === Constants.vote.up ) ? actionTypes.UP_VOTE : actionTypes.DOWN_VOTE
 
     return dispatch => {
-        API.articleVote(postID, type).then(articles => dispatch({
+        API.articleVote(postID, type).then(article => dispatch({
             type: actionType,
-            articles
+            article
         }))
     }
 }

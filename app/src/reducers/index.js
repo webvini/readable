@@ -23,7 +23,7 @@ const articles = (state = {}, action) => {
         case UP_VOTE:
             return {
                 ...state,
-                data: articles
+                data: article
             }
         default:
             return {
