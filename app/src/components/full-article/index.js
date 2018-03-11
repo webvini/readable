@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import Author from './../author'
 import Vote from './../vote'
+import Comments from './../comments'
 
 const FullArticle = props => {
     const { article } = props
@@ -22,6 +23,8 @@ const FullArticle = props => {
 
                 <Vote postID={id} />
             </div>
+
+            <Comments />
         </article>
     )
 }
